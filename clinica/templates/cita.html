@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+    {% block content %}
+    <div id="content">
+        <form method="post">
+            {{ form.as_p }}
+            <input type="submit" value="Send e-mail">
+            {% csrf_token %}
+        </form>
+    </div>
+    {% endblock %}
+</body>
+
+</html>
