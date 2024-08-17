@@ -1,13 +1,10 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Agenda tus cita.
-    </title>
+    <title>Document</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -88,44 +85,44 @@
             margin: 10px 0;
             border: 1px solid #333;
             border-radius: 4px;
-            background-color: #2e2e2e; 
-            color: #e0e0e0; 
+            background-color: #2e2e2e;
+            color: #e0e0e0;
             font-size: 16px;
-            appearance: none; 
-            -webkit-appearance: none; 
-            -moz-appearance: none; 
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
             background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23e0e0e0'%20d='M2%200L0%202h4zM2%205L0%203h4z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 10px center;
             background-size: 10px;
             cursor: pointer;
         }
-        
+
         select:focus {
             outline: none;
-            border-color: #6200ea; 
-            box-shadow: 0 0 5px rgba(98, 0, 234, 0.5); 
+            border-color: #6200ea;
+            box-shadow: 0 0 5px rgba(98, 0, 234, 0.5);
         }
-        
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Agenda tu cita</h1>
+        <h1>Registra tu mascota</h1>
     </header>
-
     <main>
         {% block content %}
         <div id="content">
             <form method="post">
-                {{ form.as_p }}
-                <input type="submit" value="Enviar" class="btn-submit">
                 {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn-submit" type="submit">Sign Up</button>
             </form>
         </div>
         {% endblock %}
+
     </main>
+
 </body>
 
 </html>

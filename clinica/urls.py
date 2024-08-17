@@ -4,8 +4,11 @@ app_name = "veterinaria"
 urlpatterns = [
     path('', login, name='login'),
     path('signup/', signup, name='signup'),
-    path('cita/', cita, name="citas"),
-    path('doc/', doctor, name="citas"),
+    path('home/', home, name='home'),
     path('logout/', logout, name='logout'),
+    path('cita/', cita, name="citas"),
+    path('doc/', doctor, name="doctor"),
+    path('pet/', pet, name="pet"),
+    path('citas/', citas, name="c_cita"),
     
 ]
